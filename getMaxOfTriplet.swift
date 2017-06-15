@@ -11,9 +11,13 @@
         }
         var sortedArray = arg.sorted(by: < )
         
-        print(sortedArray[index-1])
-        
-        let pro1 = sortedArray[0] * sortedArray[1] * sortedArray[4]
-        let pro2 = sortedArray[index - 1] * sortedArray[index - 2] * sortedArray[index - 3]
-        return getMax(pro1,pro2)
+        let x = sortedArray[0] * sortedArray[1] * sortedArray[4]
+        let y = sortedArray[index - 1] * sortedArray[index - 2] * sortedArray[index - 3]
+        return getMax(x,y)
     }
+
+
+  func getMax(_ arg1: Int, _ arg2: Int) -> Int{
+        return arg1 > arg2 ? arg1 : arg2
+  }
+// Mark: You can write a closure for getMax function!
