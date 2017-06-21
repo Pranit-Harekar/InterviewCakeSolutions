@@ -11,7 +11,7 @@
         }
         var sortedArray = arg.sorted(by: < )
         
-        let x = sortedArray[0] * sortedArray[1] * sortedArray[4]
+        let x = sortedArray[0] * sortedArray[1] * sortedArray[index - 1]
         let y = sortedArray[index - 1] * sortedArray[index - 2] * sortedArray[index - 3]
         return getMax(x,y)
     }
