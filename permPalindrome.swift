@@ -5,17 +5,16 @@
 // Write an efficient function that checks whether any permutation of an input string is a palindrome
 
     
-    func permPalindrome(_ str: String) -> Bool{
-        var charset = Set<Character>()
-        
-        for c in str.characters{
-            if charset.contains(c){
-                charset.remove(c)
-            }else{
-                charset.insert(c)
-            }
+func permPalindrome(_ str: String) -> Bool {
+    var charset = Set<Character>()
+    
+    for c in str {
+        if charset.contains(c) {
+            charset.remove(c)
+        } else {
+            charset.insert(c)
         }
-        
-        return charset.count <= 1
-        
     }
+    
+    return charset.count <= 1
+}
